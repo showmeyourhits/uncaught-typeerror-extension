@@ -17,5 +17,14 @@
       ],
       "js": ["./inject.js"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "resources": ["error-script.js"]
+    }
   ]
 }

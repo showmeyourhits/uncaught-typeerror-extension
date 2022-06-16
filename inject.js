@@ -1,13 +1,8 @@
-window.addEventListener('error', (event) => {
-  console.error(event);
-})
+function addscript() {
+  const script = document.createElement('script');
+  script.src = chrome.runtime.getURL('./error-script.js');
 
-function typeErrorGenerator() {
-  const obj = Object.create({});
-
-  Object.defineProperty(obj, "takeitboi", {value: "hmm"});
-
-  Object.defineProperty(obj, "takeitboi", {value: "assa"});
+  document.head.appendChild(script);
 }
 
-typeErrorGenerator();
+addscript();
