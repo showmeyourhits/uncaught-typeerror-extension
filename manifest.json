@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "name": "Generate Extension error",
+  "version": "1.0.0",
+  "description": "generate extension errror",
+  "manifest_version": 3,
+  "author": "Your boi",
+  "action":{
+      "default_popup": "index.html",
+      "default_title": "Error gen"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": ["./inject.js"]
+    }
+  ]
+}
